@@ -1,27 +1,37 @@
 # GraficasApp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.4.
+Éste proyecto corresponde a la sexta app que desarrollé a través del curso de `Angular: de cero a experto (edición 2021)` de Fernando Herrera en Udemy. Es una app que utiliza la librería de **ng2-charts** (https://valor-software.com/ng2-charts/) para mostrar diversos tipos de gráficas que la misma provee y el uso de información proveniente de un "servidor" para crear una de estas gráficas.
 
-## Development server
+Se encuentra hecho con **Bootstrap** (versión 5.0.0-beta1), **JSON Server** (https://www.npmjs.com/package/json-server), el cual permite crear un servidor con la información precargada para crear la gráfica, y **Angular CLI** (versión 11.0.4.), con un patrón de diseño **Lazyload**. Para su instalación:
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+```bash
+npm install -g @angular/cli json-server
+```
 
-## Code scaffolding
+## Iniciar la aplicación
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Primero se deben instalar las dependencias del proyecto con:
 
-## Build
+```bash
+npm install
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Luego, con una consola distinta, posicionarse dentro de la carpeta "server" y escribir:
 
-## Running unit tests
+```bash
+json-server --watch db.json
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+> Esta consola debe permanecer abierta para realizar la peticion de la información.
 
-## Running end-to-end tests
+Por último, para abrir la aplicación:
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+```bash
+ng serve -o
+```
 
-## Further help
+Abrirá la página en la siguiente URL: `http://localhost:4200/`.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+### Nota
+
+> La página se actualizará automáticamente al realizar cambios y guardar.
